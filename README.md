@@ -11,7 +11,7 @@
 Убедитесь, что у вас установлены следующие компоненты:
 
 - Python 3.x
-- Необходимые библиотеки Python (установите их с помощью `pip install -r requirements.txt`)
+- Необходимые библиотеки Python
 
 ### Установка
 
@@ -44,6 +44,7 @@
 Этот проект распространяется под лицензией [MIT.](https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F_MIT)
 
 ##Благодарности
+
 <ul>
    <il>
       <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Beautiful Soup</a>
