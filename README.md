@@ -43,16 +43,8 @@
 ## Лицензия 
 Этот проект распространяется под лицензией [MIT.](https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F_MIT)
 
-##Благодарности
+## Благодарности
 
-<ul>
-   <il>
-      <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Beautiful Soup</a>
-   </il>
-   <il>
-     <a href="https://requests.readthedocs.io/en/latest/">Requests</a>
-   </il>
-   <il>
-      <a href = "https://docs.python.org/3/library/concurrent.futures.html">Concurrent Futures</a>
-   </il>
-</ul>
+* [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+* [Requests](https://requests.readthedocs.io/en/latest/)
+* [Concurrent Futures](https://docs.python.org/3/library/concurrent.futures.html)
