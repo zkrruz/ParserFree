@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParserJobs - Export</title>
+    <style>
+        section {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    </style>
+</head>
+<body>
+    <h1>Результаты поиска</h1>
+    <h3>Вы экспортировали вакансии по запросу: {{searchBy}}</h3>
+    <section>
+        <h4>Название заказа</h4>
+        <h4>Вознаграждение</h4>
+        <h4>Ссылка</h4>
+        {% if jobs %}
+            {% for job in jobs %}
+                <span>{{ job.title }}</span>
+                <span>{{ job.price }}</span>
+                <a href="{{ job.link }}" target="_blank">Перейти</a>
+            {% endfor %}
+        {% else %}
+            <p>Нет данных для отображения</p>
+        {% endif %}
+    </section>
+    <!-- Добавьте кнопку для экспорта в CSV -->
+<form method="get" action="{{ url_for('report') }}">
+    <input type="hidden" name="keyword" value="{{ searchBy }}">
+    <input type="hidden" name="export_csv" value="true">
+    <button type="submit">Экспорт в CSV</button>
+</form>
+
+</body>
+</html>

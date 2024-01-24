@@ -1,0 +1,21 @@
+:root{
+    --bg-color:#FEFBEC;
+    --btns-color:#f7e69a;
+    --btns-color-active:#EBC916;
+    --card-bg:#f7e69a;
+    --line-bg:#5D614B;
+    --main-btn:#fcd71d;
+    --main-btn-hover:#f5a936;
+    --text-color1:#ffffff;
+    --text-color2:#5D614B;
+} 
+.card_price{
+    text-shadow: #5D614B 0px 0px 10px;
+}
+
+.header-btn::after{
+    filter: brightness(0);
+}
+i::before{
+    filter: brightness(0);
+}

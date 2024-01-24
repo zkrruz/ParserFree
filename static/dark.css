@@ -1,0 +1,18 @@
+:root{
+    --bg-color:#141410;
+    --btns-color:#292A22;
+    --btns-color-active:#3f4135;
+    --card-bg:#3C3E31;
+    --line-bg:#5D614B;
+    --main-btn:#EBC917;
+    --main-btn-hover:#eb9617;
+    --text-color1:#292A22;
+    --text-color2:#ffffff;
+} 
+
+.header-btn::after{
+    filter: brightness(1);
+}
+i::before{
+    filter: brightness(1);
+}

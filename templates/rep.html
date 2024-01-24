@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexTask</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dark.css') }}" id="theme">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo.svg') }}" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <a href="/" class="logo"><img src="{{ url_for('static', filename='logo.svg') }}" alt=""></a>
+            <i><form action="/report"><input required name="keyword" type="text" placeholder="Поиск" value="{{searchBy}}"> <button><img src="{{ url_for('static', filename='search.svg') }}" alt=""></button></form></i>
+            
+            <form method="get" action="{{ url_for('report') }}">
+                <input type="hidden" name="keyword" value="{{ searchBy }}">
+                <input type="hidden" name="export_csv" value="true">
+                <button type="submit" class="header-btn" id="theme-btn"><img src="{{ url_for('static', filename='down.svg') }}" alt=""></button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="task_wrap">
+                {% for job in jobs %}
+                <div class="card">
+                    <p class="card_title">{{ job.title }}</p>
+                    <p class="card_price">{{ job.price }}</p>
+                    <a href="{{ job.link }}" class="card_open-btn" target="_blank">Открыть</a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='theme_switcher.js') }}"></script>
+</body>
+</html>
